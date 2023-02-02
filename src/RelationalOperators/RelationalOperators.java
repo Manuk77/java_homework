@@ -125,7 +125,7 @@ public class RelationalOperators {
         System.out.println("15 >> 3 = " + (15 >> 3) + "\n");
 
         //    2․ Տրված փոփոխականը բազմապատկեք 8-ով և 16-ով առանց օգտագործելու *-նշանը։
-        
+
         int ff = 10;
         System.out.println("ff * 8 = " + (ff << 3));
         System.out.println("ff * 16 = " + (ff << 4));
