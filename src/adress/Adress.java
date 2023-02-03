@@ -1,7 +1,7 @@
 package adress;
 
 public class Adress {
-    {
+    static {
         System.out.println("Adress class");
     }
     String country;
@@ -45,6 +45,7 @@ public class Adress {
         Bank obBank = obAdress.new Bank("Convers Bank");
         obBank.address = obAdress;
         System.out.println(obBank.address.house);
+
 
 
     }
