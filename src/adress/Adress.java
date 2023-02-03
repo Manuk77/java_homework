@@ -21,15 +21,15 @@ public class Adress {
     }
     class Bank{
 
-        {
+        static {
             System.out.println(" Class Bank ");
         }
         String bankName;
-        String address;
-        public Bank(String bankName, String address){
+        Adress address;
+        public Bank(String bankName){
 
             this.bankName = bankName;
-            this.address = address;
+
         }
 
 
@@ -39,7 +39,12 @@ public class Adress {
     public static void main(String[] args){
 
         // 6. Սահմանել Address class :  fields (country , region, city , street, house ) .
-        //Սահմանել Bank class :  fields (bankName,   address (type Address)) .
+        // Սահմանել Bank class :  fields (bankName,   address (type Address)) .
+
+        Adress obAdress = new Adress("Georgia", "Samtskhe-Javakheti", "Akhaltsikhe", "first", 22);
+        Bank obBank = obAdress.new Bank("Convers Bank");
+        obBank.address = obAdress;
+        System.out.println(obBank.address.house);
 
 
     }
