@@ -4,7 +4,7 @@ import java.util.Random;
 public class Algorithm {
 
     /**
-     * Provided that you have a given number of small rice bags (1 kilo each) and big rice bags (5 kilos each),
+     * 1. Provided that you have a given number of small rice bags (1 kilo each) and big rice bags (5 kilos each),
      * write a method that returns true if it is possible to make a package with goal kilos of rice.
      * @param small
      * @param big
@@ -16,10 +16,10 @@ public class Algorithm {
         int maxBig = goal / 5;
         int remaining = goal % 5;
 
-        if (big >= maxBig) {
-            if (small >= remaining) {
+        if (big >= maxBig && small >= remaining) {
+
                 return true;
-            }
+
         } else if (small >= goal - (big * 5)) {
             return true;
         }
@@ -27,7 +27,7 @@ public class Algorithm {
     }
 
     /**
-     * The prime factors of 455 are 5, 7 and 13.
+     * 2. The prime factors of 455 are 5, 7 and 13.
      * Write a method that calculates the largest prime factor of a given number.
      * @param number
      * @return
