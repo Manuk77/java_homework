@@ -1,4 +1,5 @@
 package algorithm.algorithm2;
+import javax.swing.plaf.multi.MultiTableHeaderUI;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -164,6 +165,7 @@ public class Main {
             if(num < min){ min = num; }
             System.out.println("do you want to continue (y/n) ");
             choice = sc.next();
+
         }while(choice.equals("y"));
 
         System.out.println("max -> " + max);
@@ -385,6 +387,55 @@ public class Main {
 
     }
 
+    public int fact(int n){
+        int res = 1;
+        for(int i = 2; i <= n; ++i){
+            res *= i;
+        }
+        return res;
+    }
+    public int pow(double n){
+        int res = 1;
+        for(int i = 0; i < n; ++i){
+            res *= n;
+        }
+        return res;
+    }
+
+    public void sinX(){
+
+        Scanner sc = new Scanner(System.in);
+        int x;
+        double sum = 0.0;
+        do{
+             x = sc.nextInt();
+        }while(x < 0);
+        sum += x;
+        for(int i = 3; i <= x; i += 2){
+            sum +=  (double)(pow(i)/fact(i));
+        }
+        sum -= pow(3)/fact(3);
+        System.out.println(Math.sin(sum));
+
+
+    }
+
+    public void cosX(){
+        Scanner sc = new Scanner(System.in);
+        int x;
+        double sum = 1.0;
+        do{
+            x = sc.nextInt();
+        }while(x < 0);
+        for(int i = 2; i <= x; i += 2){
+            sum += (double)(pow(i)/fact(i));
+        }
+        sum -= (double)(pow(2)/fact(2));
+        System.out.println(Math.cos(sum));
+
+    }
+
+
     public static void main(String[] args){
 
         Main ob = new Main();
@@ -397,9 +448,10 @@ public class Main {
         ob.armstrongNumbers();
         ob.sumOfSequance();
         ob.logarithmOfTwo();
-        ob.goodGuess();*/
-        ob.patterns();
-
+        ob.goodGuess();
+        ob.patterns();*/
+        ob.sinX();
+        ob.cosX();
     }
 
 }
