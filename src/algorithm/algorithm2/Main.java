@@ -374,10 +374,10 @@ public class Main {
                 System.out.print(" ");
             }
             for(int j = i + 1; j > 0; --j){
-                System.out.print(j % 10);
+                System.out.print(j);
             }
             for(int j = 2; j <= i + 1; ++j){
-                System.out.print(j % 10);
+                System.out.print(j);
             }
             System.out.println();
         }
@@ -397,8 +397,8 @@ public class Main {
         ob.armstrongNumbers();
         ob.sumOfSequance();
         ob.logarithmOfTwo();
-        ob.goodGuess();
-        ob.patterns();*/
+        ob.goodGuess();*/
+        ob.patterns();
 
     }
 
