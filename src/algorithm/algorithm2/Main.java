@@ -387,6 +387,11 @@ public class Main {
 
     }
 
+    /**
+     *
+     * @param n
+     * @return
+     */
     public int fact(int n){
         int res = 1;
         for(int i = 2; i <= n; ++i){
@@ -394,7 +399,7 @@ public class Main {
         }
         return res;
     }
-    public int pow(double n){
+    public int pow(int n){
         int res = 1;
         for(int i = 0; i < n; ++i){
             res *= n;
@@ -411,10 +416,15 @@ public class Main {
              x = sc.nextInt();
         }while(x < 0);
         sum += x;
-        for(int i = 3; i <= x; i += 2){
-            sum +=  (double)(pow(i)/fact(i));
+        for(int i = 3, j = 0; i <= x; i += 2, ++j){
+            if((j&1)== 1){
+                sum -= pow(i)/fact(i);
+            }else{
+                sum +=  (double)(pow(i)/fact(i));
+            }
+
         }
-        sum -= pow(3)/fact(3);
+
         System.out.println(Math.sin(sum));
 
 
@@ -427,10 +437,15 @@ public class Main {
         do{
             x = sc.nextInt();
         }while(x < 0);
-        for(int i = 2; i <= x; i += 2){
-            sum += (double)(pow(i)/fact(i));
+        for(int i = 2, j = 0; i <= x; i += 2, ++j){
+            if((j&1) == 1){
+                sum -= (double)(pow(i)/fact(i));
+            }else{
+                sum += (double)(pow(i)/fact(i));
+            }
+
         }
-        sum -= (double)(pow(2)/fact(2));
+
         System.out.println(Math.cos(sum));
 
     }
@@ -452,6 +467,7 @@ public class Main {
         ob.patterns();*/
         ob.sinX();
         ob.cosX();
+
     }
 
 }
