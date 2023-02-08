@@ -466,7 +466,7 @@ public class Main {
         ob.goodGuess();
         ob.patterns();*/
         ob.sinX();
-        ob.cosX();
+        //ob.cosX();
 
     }
 
