@@ -412,19 +412,25 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int x;
         double sum = 0.0;
+
         do{
              x = sc.nextInt();
+
         }while(x < 0);
+
         sum += x;
+
         for(int i = 3, j = 0; i <= x; i += 2, ++j){
-            if((j&1)== 1){
-                sum -= pow(i)/fact(i);
+
+            if((j & 1)== 1){
+                sum -= (double) (pow(i)/fact(i));
             }else{
                 sum +=  (double)(pow(i)/fact(i));
             }
 
         }
 
+        sum = Math.pow(sum, x);
         System.out.println(Math.sin(sum));
 
 
@@ -434,18 +440,22 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int x;
         double sum = 1.0;
+
         do{
             x = sc.nextInt();
+
         }while(x < 0);
+
         for(int i = 2, j = 0; i <= x; i += 2, ++j){
-            if((j&1) == 1){
+
+            if((j & 1) == 1){
                 sum -= (double)(pow(i)/fact(i));
             }else{
                 sum += (double)(pow(i)/fact(i));
             }
 
         }
-
+        sum = Math.pow(sum, x);
         System.out.println(Math.cos(sum));
 
     }
@@ -466,7 +476,7 @@ public class Main {
         ob.goodGuess();
         ob.patterns();*/
         ob.sinX();
-        //ob.cosX();
+        ob.cosX();
 
     }
 
