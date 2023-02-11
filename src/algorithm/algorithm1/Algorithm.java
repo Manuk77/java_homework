@@ -78,6 +78,7 @@ public class Algorithm {
         int num = 0;
 
         while(count > 0){
+            
             num = random.nextInt(100) + 1;
             if(num > max){
                 max = num;
@@ -97,9 +98,9 @@ public class Algorithm {
 
         Algorithm ob = new Algorithm();
         System.out.println(ob.canMakePackage(6, 5, 31) + "\n");
-        System.out.println(ob.largestPrimeFactors(135) + "\n");
-        ob.randomGenerate();
-        ob.randomMaxMin();
+        System.out.println(ob.largestPrimeFactors(75) + "\n");
+        //ob.randomGenerate();
+        //ob.randomMaxMin();
 
 
     }

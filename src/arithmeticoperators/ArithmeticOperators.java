@@ -1,4 +1,4 @@
-package ArithmeticOperators;
+package arithmeticoperators;
 
 public class ArithmeticOperators {
         public static void main(String[] args){

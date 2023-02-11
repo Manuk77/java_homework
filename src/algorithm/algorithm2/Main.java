@@ -76,7 +76,7 @@ public class Main {
         System.out.println("enter num -> " + (num = sc.nextInt()));
 
         if(num > 1){
-            for(int i = 2; i < (num / 2); ++i){
+            for(int i = 2; i < (num / i); ++i){
                 if(num % i == 0){
                     return false;
                 }
@@ -475,8 +475,8 @@ public class Main {
         ob.logarithmOfTwo();
         ob.goodGuess();
         ob.patterns();*/
-        ob.sinX();
-        ob.cosX();
+        //ob.sinX();
+        //ob.cosX();
 
     }
 

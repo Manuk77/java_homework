@@ -1,4 +1,4 @@
-package UnaryOperators;
+package unaryoperators;
 
 public class UnaryOperators {
 

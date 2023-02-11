@@ -1,4 +1,4 @@
-package RelationalOperators;
+package relationaloperators;
 
 public class RelationalOperators {
 

@@ -1,4 +1,4 @@
-package AssignmentOperator;
+package assignmentoperator;
 
 public class AssignmentOperator {
 
