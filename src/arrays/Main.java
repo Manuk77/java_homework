@@ -200,7 +200,7 @@ public class Main {
         int count1 = 0;
         int count2 = 0;
 
-        for(int j = 0; j < arr.length - count - 1; ++j) {
+        for(int j = 0; j < arr.length; ++j) {
             for (int i = count2; i < arr.length - count; ++i) {
                 //count1++;
                 if ((arr[i] & 1) == 1 && (arr[arr.length - count - 1] & 1) == 1) {
@@ -403,7 +403,7 @@ public class Main {
                 {9, 7, 1, -17}
         };
 
-        int[] x = new int[]{1, 5, 6, 4, 9, 0, 4, 7, 7, 9, 1};
+        int[] x = new int[]{1, 5, 6, 4, 9, 7, 1};
         //ob.printPosValues(array);
         //ob.printBackwards(arr);
         //ob.printMaxValue(list);
@@ -413,7 +413,7 @@ public class Main {
         //ob.addingSameIndexValues();
         //ob.countOfGivenValueInArray();
         //ob.nonRepetedSubList();
-        //ob.evenValuesToLastPosition(arr2);
+        ob.evenValuesToLastPosition(x);
         //ob.binaryToInt(arr3);
         //ob.upperMainDiagonal(arrTwoD);
         //ob.swapSymmetric(arrTwoD);
