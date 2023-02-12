@@ -118,16 +118,25 @@ public class Main {
      *
      */
 
-    public void nonRepetedSubList(){
+    public int fact(int n){
+        int res = 1;
+        for(int i = 2; i <= n; ++i){
+            res *= i;
+        }
+        return res;
+    }
 
-        int[] arr = new int[]{1, 5, 6, 4};
+    public void nonRepetedSubList() {
+
+        int[] arr = new int[]{1, 5, 6, 4, 3,};
         int count = 0;
-        int[][] arr1 = new int[arr.length][3];
 
-        for(int i = 0; i < arr.length - 2; ++i){
-            for(int j = i + 1; j < arr.length - 1; ++j){
-                for(int k = j + 1; k < arr.length; ++k){
-                    if(arr[i] != arr[j] && arr[i] != arr[k] && arr[j] != arr[k]){
+        int[][] arr1 = new int[fact(arr.length) / (fact(arr.length - 3) * fact(3))][3];
+        //System.out.println("arr1.lenght -> " + arr1.length);
+        for (int i = 0; i < arr.length - 2; ++i) {
+            for (int j = i + 1; j < arr.length; ++j) {
+                for (int k = j + 1; k < arr.length; ++k) {
+                    if (arr[i] != arr[j] && arr[i] != arr[k] && arr[j] != arr[k]) {
                         arr1[count][0] = arr[i];
                         arr1[count][1] = arr[j];
                         arr1[count][2] = arr[k];
@@ -137,15 +146,16 @@ public class Main {
             }
         }
 
-        for(int i = 0; i < arr.length; ++i){
-            for(int j = 0; j < 3; ++j){
-                System.out.print(arr1[i][j] + "\t" );
+        for (int i = 0; i < arr1.length; ++i) {
+            for (int j = 0; j < 3; ++j) {
+                System.out.print(arr1[i][j] + "\t");
             }
             System.out.println();
         }
+
         System.out.println();
 
-        for(int i = 0; i < arr1.length; ++i){
+        /*for(int i = 0; i < arr1.length; ++i){
             bableSort(arr1[i]);
         }
         System.out.println("after sorted \n");
@@ -155,7 +165,7 @@ public class Main {
                 System.out.print(arr1[i][j] + "\t");
             }
             System.out.println();
-        }
+        }*/
 
     }
 
@@ -417,8 +427,8 @@ public class Main {
         //ob.copyArray(arr2);
         //ob.addingSameIndexValues();
         //ob.countOfGivenValueInArray();
-        //ob.nonRepetedSubList();
-        ob.evenValuesToLastPosition(x);
+        ob.nonRepetedSubList();
+        //ob.evenValuesToLastPosition(x);
         //ob.binaryToInt(arr3);
         //ob.upperMainDiagonal(arrTwoD);
         //ob.swapSymmetric(arrTwoD);
