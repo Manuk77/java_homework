@@ -202,7 +202,7 @@ public class Main {
 
         for(int j = 0; j < arr.length; ++j) {
             for (int i = count2; i < arr.length - count; ++i) {
-                //count1++;
+                count1++;
                 if ((arr[i] & 1) == 1 && (arr[arr.length - count - 1] & 1) == 1) {
                     count++;
                     break;
@@ -215,11 +215,16 @@ public class Main {
                 } else if ((arr[i] & 1) == 0) {
                     count2++;
                     break;
+                }else if((arr[i] & 1) == 0 && ((arr[arr.length - count - 1] & 1) == 0)){
+                    count2++;
+                }else{
+                    count2++;
+                    count++;
                 }
 
             }
         }
-        //System.out.println("count -> " + count1);
+        System.out.println("count -> " + count1);
         for(int i = 0 ; i < arr.length; ++i){
             System.out.print(arr[i] + "\t");
         }
