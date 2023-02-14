@@ -1,4 +1,4 @@
-package samePackage;
+package samepackage;
 
 public class SecondClass {
 
