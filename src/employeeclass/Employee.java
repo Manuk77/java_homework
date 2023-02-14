@@ -1,4 +1,4 @@
-package employeeClass;
+package employeeclass;
 
 public class Employee {
     static {
