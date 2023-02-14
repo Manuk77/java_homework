@@ -222,11 +222,11 @@ public class Main {
                     arr[arr.length - count - 1] = arr[arr.length - count - 1] ^ arr[i];
                     count++;
                     count2++;
-                } else if ((arr[i] & 1) == 0) {
-                    count2++;
-                    break;
                 }else if((arr[i] & 1) == 0 && ((arr[arr.length - count - 1] & 1) == 0)){
                     count2++;
+                }else if ((arr[i] & 1) == 0) {
+                    count2++;
+                    break;
                 }else{
                     count2++;
                     count++;
@@ -385,10 +385,14 @@ public class Main {
 
         //int sum;
         boolean[] array = new boolean[arr.length];
-        if(isOdd(arr[0])&&(isOdd(arr[1])&&isOdd(arr[2]))){
-            return true;
+        for(int i = 0 ; i < arr.length; ++i){
+            if(!isOdd(arr[i])){
+                return false;
+            }
+
         }
-        return false;
+
+        return true;
 
     }
 
@@ -418,7 +422,7 @@ public class Main {
                 {9, 7, 1, -17}
         };
 
-        int[] x = new int[]{1, 5, 6, 4, 9, 7, 1};
+        int[] x = new int[]{4, 5, 6, 8, 7, 9, 5, 4, 9, 7, 1, 6};
         //ob.printPosValues(array);
         //ob.printBackwards(arr);
         //ob.printMaxValue(list);
@@ -427,13 +431,15 @@ public class Main {
         //ob.copyArray(arr2);
         //ob.addingSameIndexValues();
         //ob.countOfGivenValueInArray();
-        ob.nonRepetedSubList();
+        //ob.nonRepetedSubList();
         //ob.evenValuesToLastPosition(x);
         //ob.binaryToInt(arr3);
         //ob.upperMainDiagonal(arrTwoD);
         //ob.swapSymmetric(arrTwoD);
-        //System.out.println(ob.sumOfMatrixRowsISOdd(arrTwo));
+        System.out.println(ob.sumOfMatrixRowsISOdd(arrTwo));
         //ob.longestProgressCount(x);
         //ob.escapeZeroes(array);
+
+        String str = new String();
     }
 }
