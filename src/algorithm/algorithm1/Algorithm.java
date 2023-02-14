@@ -87,6 +87,7 @@ public class Algorithm {
                 min = num;
             }
             --count;
+            
         }
         System.out.println("min = " + min + " \n");
         System.out.println("max = " + max + " \n");
