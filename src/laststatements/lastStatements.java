@@ -1,4 +1,4 @@
-package lastStatements;
+package laststatements;
 
 public class lastStatements {
 
