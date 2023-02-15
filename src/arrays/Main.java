@@ -155,7 +155,7 @@ public class Main {
 
         System.out.println();
 
-        /*for(int i = 0; i < arr1.length; ++i){
+        for(int i = 0; i < arr1.length; ++i){
             bableSort(arr1[i]);
         }
         System.out.println("after sorted \n");
@@ -165,7 +165,7 @@ public class Main {
                 System.out.print(arr1[i][j] + "\t");
             }
             System.out.println();
-        }*/
+        }
 
     }
 
