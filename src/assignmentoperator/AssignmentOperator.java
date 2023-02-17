@@ -13,7 +13,7 @@ public class AssignmentOperator {
         //       boolean x = (y = true);
         //       System.out.println(x);
 
-        
+
         int x = (int)1.0;
         short y = (short)1921222;
         System.out.println((2147483647 + 1));
