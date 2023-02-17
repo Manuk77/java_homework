@@ -11,7 +11,7 @@ public class MainStringBuilder {
      */
     public void concat(StringBuilder string1, StringBuilder string2){
 
-        if(string1.equals("") && string2.equals("")){
+        if(string1.isEmpty() && string2.isEmpty()){
             System.out.println("there is nothing to concatenate");
             return;
         }
@@ -28,7 +28,7 @@ public class MainStringBuilder {
      * @param string
      */
     public void toUpperCase(StringBuilder string){
-        if(string.equals("")){
+        if(string.isEmpty()){
             System.out.println("the given string is empty");
             return;
         }
@@ -47,7 +47,7 @@ public class MainStringBuilder {
      * @param string
      */
     public void removeSimbol(StringBuilder string){
-        if(string.equals("")){
+        if(string.isEmpty()){
             System.out.println("the given string is empty");
             return;
         }
@@ -69,7 +69,7 @@ public class MainStringBuilder {
      */
 
      public void printsStringToTheGivenIndex(StringBuilder string, int index){
-        if (string.equals("")) {
+        if (string.isEmpty()) {
             System.out.println("the given string is empty");
             return;
         }
@@ -87,14 +87,14 @@ public class MainStringBuilder {
 
         StringBuilder string1 = new StringBuilder("hello ");
         StringBuilder string2 = new StringBuilder(" world ");
-        StringBuilder string3 = new StringBuilder("areal armenia");
+        StringBuilder string3 = new StringBuilder("");
 
         MainStringBuilder obMSB = new MainStringBuilder();
         //obMSB.concat(string1, string2);
         //obMSB.toUpperCase(string1);
 
         //obMSB.removeSimbol(string3);
-        //obMSB.printsStringToTheGivenIndex(string3, 10);
+        obMSB.printsStringToTheGivenIndex(string3, 0);
 
 
     }
