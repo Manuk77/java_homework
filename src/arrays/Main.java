@@ -341,21 +341,18 @@ public class Main {
 
         int count = 0;
         for(int i = 0; i < arr.length; ++i){
-            for(int j = 0; j < arr[i].length; ++j){
+            for(int j = i + 1; j < arr[i].length; ++j){
                 //count++;
-                if(i != j){
                     arr[i][j] = arr[i][j] ^ arr[j][i];
                     arr[j][i] = arr[j][i] ^ arr[i][j];
                     arr[i][j] = arr[i][j] ^ arr[j][i];
-                }
-                else{
-                    break;
-                }
+
+
             }
         }
         //System.out.println("count -> " + count + "\n");
         for(int i = 0; i < arr.length; ++i){
-            for(int j = 0;  j < arr[i].length; ++j){
+            for(int j = i + 1;  j < arr[i].length; ++j){
                 System.out.print(arr[i][j] + "\t");
             }
             System.out.println();
@@ -367,7 +364,7 @@ public class Main {
      * @param arr
      * @return is odd the sum of row
      */
-    public boolean isOdd(int[] arr){
+    public boolean isEven(int[] arr){
 
         int sum = 0;
         for(int i = 0; i < arr.length; ++i){
@@ -381,12 +378,12 @@ public class Main {
      * @param arr
      * @return if sum of evry row is odd
      */
-    public boolean sumOfMatrixRowsISOdd(int[][] arr){
+    public boolean sumOfMatrixRowsISEven(int[][] arr){
 
         //int sum;
         boolean[] array = new boolean[arr.length];
         for(int i = 0 ; i < arr.length; ++i){
-            if(!isOdd(arr[i])){
+            if(!isEven(arr[i])){
                 return false;
             }
 
@@ -435,8 +432,8 @@ public class Main {
         //ob.evenValuesToLastPosition(x);
         //ob.binaryToInt(arr3);
         //ob.upperMainDiagonal(arrTwoD);
-        //ob.swapSymmetric(arrTwoD);
-        System.out.println(ob.sumOfMatrixRowsISOdd(arrTwo));
+        ob.swapSymmetric(arrTwoD);
+        //System.out.println(ob.sumOfMatrixRowsISOdd(arrTwo));
         //ob.longestProgressCount(x);
         //ob.escapeZeroes(array);
 
