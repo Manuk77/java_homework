@@ -1,7 +1,7 @@
 package arithmeticoperators;
 
 public class ArithmeticOperators {
-    
+
         public static void main(String[] args){
             // 1․ Ստեղծել 2 փոփոխական(int a = 8, int b = 6), տպել console -ում  հետևյալը․
 
