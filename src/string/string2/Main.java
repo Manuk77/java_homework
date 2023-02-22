@@ -170,13 +170,8 @@ public class Main {
             System.out.println("the given string is empty");
             return false;
         }
-        int lenght = 0;
-        if((string.length() & 1) == 1){
-            lenght = (string.length() / 2) + 1;
-        }else{
-            lenght = string.length() / 2;
-        }
-        for(int i = 0, j = string.length() - 1; i < lenght; ++i, --j){
+        
+        for(int i = 0, j = string.length() - 1; i < string.length() / 2; ++i, --j){
             if(string.charAt(i) != string.charAt(j)){
                 return false;
             }
@@ -217,7 +212,7 @@ public class Main {
         //String[] str = {"acs", "acvf", "dsff", "axd"};
         //ob.morseAlphabet("java academic program");
         //ob.printsFirsTwoLetters("");
-        //System.out.println(ob.palindrome("abcadccdacba"));
+        System.out.println(ob.palindrome("abccba"));
         //System.out.println(ob.returnsList(str));
 
 
