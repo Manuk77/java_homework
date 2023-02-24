@@ -5,24 +5,26 @@ import java.util.Scanner;
 public class MainString {
 
 
-
-
     /**
-     * ex1.
-     * the method does string concatenation
-     * @param string1
-     * @param string2
+     * ex.1
+     *the method does string concatenation
+     * @param varArgs
      */
-    public void concat(String string1, String string2){
+    public void concat(Object ... varArgs){
 
-        if(string1.equals("") || string2.equals("")){
+        for(Object x: varArgs){
+            System.out.print(x + " ");
+        }
+
+
+        /*if(string1.equals("") || string2.equals("")){
             System.out.println("there is nothing to concatenate");
             return;
         }
         System.out.println(string1 + string2 + "\n");
         System.out.println(1 + 2 + string1 + "\n");
         System.out.println("1" + 2 + string1 + "\n");
-        System.out.println(string1 + 1 + 2 + string2 +"\n");
+        System.out.println(string1 + 1 + 2 + string2 +"\n");*/
 
     }
 
@@ -249,6 +251,7 @@ public class MainString {
     }
 
     /**
+     * ex.12
      * returns boolen value is String empty or null
      * @param string
      * @return true or false
@@ -259,6 +262,7 @@ public class MainString {
     }
 
     /**
+     * ex.13
      * prints longes word spleted with "," simbol
      * @param string
      * @param simbol
@@ -292,12 +296,12 @@ public class MainString {
 
 
         MainString ms = new MainString();
-        String string1 = new String("hello ");
-        String string2 = new String(" world");
+        String string1 = new String("hello");
+        String string2 = new String("world");
         StringBuilder string3 = new StringBuilder("We are living in");
 
         String string4 = "simple";
-        //ms.concat(string1, string2);
+        //ms.concat(12, string2);
         //ms.StringNewLine(string3);
         //ms.reversString(string4);
         //ms.countOfSubstrings( "We are living in an yellow submarine. We dont  have anything", "in");
