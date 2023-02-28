@@ -182,8 +182,194 @@ public class Main {
             }
         }
         return str2;
+
     }
 
+    /**
+     * ex.8
+     * helping methods are isCommonSequence() and compereWith()
+     * fiends longest common subSequence
+     * @param str1
+     * @param str2
+     * @return longest sub sequence
+     */
+
+
+    public String longestCommonSubSequence(String str1, String str2){
+        if(str1 == null || str2 == null){
+            System.out.println("the given strings has no reference");
+            return null;
+        }
+        if(str1.isEmpty() || str2.isEmpty()){
+            System.out.println("one of the given strings are empty ");
+            return null;
+        }
+        List<String> allSubSequences;
+        allSubSequences = allPossibleSubSequences(str2);
+        List<String> containingSubSequences = new ArrayList<>();
+        for(int i = 0; i < str1.length() - 1; ++i){
+            for(int j = i + i; j < str1.length(); ++j){
+                if(contains(str1.substring(i, j), allSubSequences)){
+                    containingSubSequences.add(str1.substring(i, j + 1));
+                }
+            }
+        }
+        return longestSequence(containingSubSequences);
+    }
+
+    /**
+     * helping method for ex.8
+     * calculates all possible subSequences and collects in the list
+     * @param str2
+     * @return List<String>
+     */
+    public List<String> allPossibleSubSequences(String str2){
+        List<String> stringList = new ArrayList<>();
+        for(int i = 0; i < str2.length() - 1; ++i){
+            for(int j = i + 1; j < str2.length(); ++j){
+                stringList.add(str2.substring(i, j));
+            }
+        }
+        return stringList;
+    }
+
+    /**
+     * helping method for ex.8
+     * checks if the given string is containing in the given list
+     * @param str1
+     * @param stringList
+     * @return true or false
+     */
+    public boolean contains(String str1, List<String> stringList){
+        for(String item : stringList){
+            if(str1.equals(item)){
+                return true;
+            }
+        }
+        return false;
+
+    }
+
+    /**
+     * helping method for ex.8
+     * fiends the longest sequence in the given list
+     * @param stringList
+     * @return longest sequence type of String
+     */
+    public String longestSequence(List<String> stringList){
+        String str = stringList.get(0);
+        for(int i = 1; i < stringList.size(); ++i){
+            String tempStr = stringList.get(i);
+            if(str.length() < tempStr.length()){
+                str = tempStr;
+            }
+        }
+        return str;
+    }
+
+    /**
+     * ex.9
+     * calculates the number of characters in the given strings
+     * @param str1
+     * @param str2
+     * @return numberOfCharacters
+     */
+    public int numberOfCommonCharacters(String str1, String str2){
+        if(str1 == null || str2 == null){
+            System.out.println("the given strings has no reference");
+            return -1;
+        }
+        if(str1.isEmpty() || str2.isEmpty()){
+            System.out.println("one of the given strings are empty ");
+            return -2;
+        }
+        int numberOfCharacters = 0;
+        for(int i = 0; i < str1.length(); ++i){
+            if(isCharacter(str1.charAt(i), str2)){
+                numberOfCharacters++;
+            }
+        }
+        return numberOfCharacters;
+    }
+
+    /**
+     * helping method foe ex.9
+     * checks if is the given char in the given string
+     * @param c
+     * @param str2
+     * @return true or false
+     */
+    public boolean isCharacter(char c, String str2){
+        for(int i = 0; i < str2.length(); ++i){
+            if(c == str2.charAt(i)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * ex.10
+     * calls the fiendsParentheses() and calls reverse() methods
+     * @param str
+     * @return final reversing string
+     */
+    public StringBuilder reverseRes(String str){
+        if(str == null || str.isEmpty()){
+            System.out.println("the given strings has no reference");
+            return null;
+        }
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(str);
+        String reversString;
+        List<Integer> indexOfParentheses;
+        indexOfParentheses = fiendsParentheses(stringBuilder);
+        for(int i = indexOfParentheses.size() / 2; i >= 0; --i){
+           reversString =  reverse(stringBuilder.substring(indexOfParentheses.get(i), indexOfParentheses.get(indexOfParentheses.size() - i + 1)));
+           stringBuilder.replace(indexOfParentheses.get(i),indexOfParentheses.get(indexOfParentheses.size() - i + 1), reversString);
+           stringBuilder.delete(indexOfParentheses.get(i), indexOfParentheses.get(indexOfParentheses.size() - i + 1));
+        }
+        return stringBuilder;
+    }
+
+    /**
+     * helping method for ex.10
+     * fiends all parentheses in the given strign
+     * @param str
+     * @return List<Integer>
+     */
+    public List<Integer> fiendsParentheses(StringBuilder str){
+        List<Integer> integerListOpeningClosing = new ArrayList<>();
+        List<Integer> integerListClosing = new ArrayList<>();
+        for(int i = 0; i < str.length(); ++i){
+            if(str.charAt(i) == '('){
+                integerListOpeningClosing.add(i);
+            } else if (str.charAt(i) == ')') {
+                integerListClosing.add(i);
+            }
+        }
+        if(integerListOpeningClosing.size() == integerListClosing.size()){
+            for(int i = 0; i < integerListOpeningClosing.size(); ++i){
+                integerListOpeningClosing.add(integerListClosing.get(i));
+            }
+        }
+        return integerListOpeningClosing;
+    }
+
+    /**
+     * helping method for ex.10
+     * reverses the given sub string
+     * @param str1
+     * @return reversed substring
+     */
+    public String reverse(String str1){
+       String str2;
+       StringBuilder stringBuilder = new StringBuilder();
+       stringBuilder.append(str1);
+       stringBuilder.reverse();
+       str2 = stringBuilder.toString();
+       return str2;
+    }
 
 
 
@@ -208,6 +394,8 @@ public class Main {
         //System.out.println(ob.returnsList(stringList));
 
         //System.out.println(ob.longestPalindrome("abacaaacabcabacba"));
-
+        //System.out.println(ob.longestCommonSubSequence("inchkachkavonces", "voncesinchkachka"));
+        //System.out.println(ob.numberOfCommonCharacters("voncesinvhkamanuk", "voncesinchkamanu"));
+        System.out.println(ob.reverseRes("(abc(acd)ade(adf))"));
     }
 }
