@@ -1,4 +1,4 @@
-package Enumeration.days_of_week_ex2;
+package enumeration.days_of_week_ex2;
 
 public enum DaysOfWeek {
     SUNDAY(1),

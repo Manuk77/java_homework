@@ -1,4 +1,4 @@
-package Enumeration.unit_ex5;
+package enumeration.unit_ex5;
 
 public enum Unit {
     METER("m"){

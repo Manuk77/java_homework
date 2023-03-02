@@ -1,4 +1,4 @@
-package Enumeration.Shape_ex3;
+package enumeration.Shape_ex3;
 
 public class Main {
     public static void main(String[] args) {

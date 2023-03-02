@@ -1,4 +1,4 @@
-package Enumeration.Data_ex1;
+package enumeration.data_ex1;
 
 public class Main {
     public static void main(String[] args) {

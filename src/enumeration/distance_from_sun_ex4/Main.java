@@ -1,4 +1,4 @@
-package Enumeration.distance_from_sun_ex4;
+package enumeration.distance_from_sun_ex4;
 
 public class Main {
     public static void main(String[] args) {

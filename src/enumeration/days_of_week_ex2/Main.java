@@ -1,4 +1,4 @@
-package Enumeration.days_of_week_ex2;
+package enumeration.days_of_week_ex2;
 
 public class Main {
     public static void main(String[] args) {

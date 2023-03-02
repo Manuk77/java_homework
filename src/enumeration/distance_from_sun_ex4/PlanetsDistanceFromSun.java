@@ -1,4 +1,4 @@
-package Enumeration.distance_from_sun_ex4;
+package enumeration.distance_from_sun_ex4;
 
 public enum PlanetsDistanceFromSun {
     MERCURY(35_000_000L){
