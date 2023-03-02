@@ -1,4 +1,4 @@
-package enumeration.Shape_ex3;
+package enumeration.shape_ex3;
 
 public enum Shape {
     SQUARE(1){
