@@ -2,21 +2,21 @@ package enumeration.unit_ex5;
 
 public enum Unit {
     KILOGRAM(null, 0){
-        String t = " ";
+        final String  t = " ";
         @Override
         public String getUnit() {
             return super.toString() + " = " + KILOGRAM.uniteNumber + t + KELVIN.str;
         }
     },
     METER(null, 0){
-        String t = " ";
+        final String t = " ";
         @Override
         public String getUnit() {
             return super.toString() + " = " + METER.uniteNumber + t + METER.str ;
         }
     },
     SECOND(null, 0){
-        String t = " ";
+        final String t = " ";
         @Override
         public String getUnit() {
             return super.toString() + " = " + SECOND.uniteNumber + t + SECOND.str;
@@ -24,28 +24,28 @@ public enum Unit {
     },
 
     MOLE(null, 0){
-        String t = " ";
+        final String t = " ";
         @Override
         public String getUnit() {
             return super.toString() + " = " + MOLE.uniteNumber + t + METER.str;
         }
     },
     KELVIN(null, 0){
-        String t = " ";
+        final String t = " ";
         @Override
         public String getUnit() {
             return super.toString() + " = " + KELVIN.uniteNumber + t + KELVIN.str;
         }
     },
     CANDELA(null, 0){
-        String t = " ";
+        final String t = " ";
         @Override
         public String getUnit() {
             return super.toString() + " = " + CANDELA.uniteNumber + t + CANDELA.str;
         }
     },
     NEWTON(KILOGRAM,METER,SECOND){
-        String t = " ";
+        final String t = " ";
         @Override
         public String getUnit() {
             return  super.toString() + " = " + KILOGRAM.uniteNumber * METER.uniteNumber / SECOND.uniteNumber + KILOGRAM.str + t + METER.str
@@ -60,7 +60,7 @@ public enum Unit {
       }
     },*/
     VOLTAGE(null, 0){
-        String t = " ";
+        final String t = " ";
         @Override
         public String getUnit() {
             return super.toString() + " = " + VOLTAGE.uniteNumber + t + VOLTAGE.str;
@@ -68,7 +68,7 @@ public enum Unit {
     },
 
     OHM(null, 0){
-        String t = " ";
+        final String t = " ";
         @Override
         public String getUnit() {
             return super.toString() + " = " + OHM.uniteNumber + t + OHM.str;
