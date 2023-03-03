@@ -3,6 +3,21 @@ package enumeration.unit_ex5;
 public class Main {
     public static void main(String[] args) {
         Unit meter = Unit.METER;
-        System.out.println(meter.getBashUnit("A"));
+        Unit voltage = Unit.VOLTAGE;
+        Unit ohm = Unit.OHM;
+        Unit kilogram = Unit.KILOGRAM;
+        Unit second = Unit.SECOND;
+        Unit newton = Unit.NEWTON;
+
+        meter.setStr("metr");
+        meter.setUniteNumber(5);
+
+        kilogram.setStr("kg");
+        kilogram.setUniteNumber(7);
+
+        second.setStr("sec");
+        second.setUniteNumber(1);
+
+        System.out.println(newton.getUnit());
     }
 }
