@@ -52,13 +52,7 @@ public enum Unit {
                     + t + " / " + SECOND.str + " * 2";
         }
     },
-    /*AMPERE(VOLTAGE, OHM){
-      String t = " ";
-      @Override
-      public String getUnit() {
-        return VOLTAGE.uniteNumber / OHM.uniteNumber + t + VOLTAGE.str + " / " + OHM.str;
-      }
-    },*/
+
     VOLTAGE(null, 0){
         final String t = " ";
         @Override
@@ -72,6 +66,14 @@ public enum Unit {
         @Override
         public String getUnit() {
             return super.toString() + " = " + OHM.uniteNumber + t + OHM.str;
+        }
+    },
+
+    AMPERE(VOLTAGE, OHM){
+        String t = " ";
+        @Override
+        public String getUnit() {
+            return VOLTAGE.uniteNumber / OHM.uniteNumber + t + VOLTAGE.str + " / " + OHM.str;
         }
     };
 
