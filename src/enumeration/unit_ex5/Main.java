@@ -28,5 +28,6 @@ public class Main {
         Unit amper = Unit.AMPERE;
 
         System.out.println(amper.getUnit());
+        
     }
 }
