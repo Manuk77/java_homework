@@ -19,5 +19,14 @@ public class Main {
         second.setUniteNumber(1);
 
         System.out.println(newton.getUnit());
+        voltage.setStr("volt");
+        voltage.setUniteNumber(8);
+
+        ohm.setStr("ohm");
+        ohm.setUniteNumber(11);
+
+        Unit amper = Unit.AMPERE;
+
+        System.out.println(amper.getUnit());
     }
 }

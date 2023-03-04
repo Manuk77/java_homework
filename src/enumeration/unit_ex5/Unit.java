@@ -49,7 +49,7 @@ public enum Unit {
         @Override
         public String getUnit() {
             return  super.toString() + " = " + KILOGRAM.uniteNumber * METER.uniteNumber / SECOND.uniteNumber + KILOGRAM.str + t + METER.str
-                    + t + " / " + SECOND.str + " * 2";
+                    + t + " / " + SECOND.str + " ^ 2";
         }
     },
 
