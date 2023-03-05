@@ -13,10 +13,10 @@ public enum PlanetsDistanceFromSun {
             return VENUS.planetsDistanceFromTheSun;
         }
     },
-    Earth(93_000_000L){
+    EARTH(93_000_000L){
         @Override
         public long PlanetsDistanceFromTheSun() {
-            return Earth.planetsDistanceFromTheSun;
+            return EARTH.planetsDistanceFromTheSun;
         }
     },
     MARS(142_000_000L){
