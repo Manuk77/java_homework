@@ -309,12 +309,7 @@ public class Main {
     }
 
 
-    /**
-     * ex.10
-     * calls the fiendsParentheses() and calls reverse() methods
-     * @param str
-     * @return final reversing string
-     */
+
     /*
     public StringBuilder reverseRes(String str){
         if(str == null || str.isEmpty()){
@@ -337,12 +332,7 @@ public class Main {
         return stringBuilder;
     }*/
 
-    /**
-     * helping method for ex.10
-     * fiends all parentheses in the given strign
-     * @param str
-     * @return List<Integer>
-     */
+    
     /*
     public void fiendsParentheses(StringBuilder str, List<Integer> integerListOpeningClosing){
         List<Integer> integerListClosing = new ArrayList<>();
@@ -361,12 +351,7 @@ public class Main {
 
     }
     */
-    /**
-     * helping method for ex.10
-     * reverses the given sub string
-     * @param str1
-     * @return reversed substring
-     */
+
    /*
    public String reverse(String str1){
        String str2;
