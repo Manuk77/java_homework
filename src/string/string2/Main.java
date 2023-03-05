@@ -308,12 +308,14 @@ public class Main {
         return false;
     }
 
+
     /**
      * ex.10
      * calls the fiendsParentheses() and calls reverse() methods
      * @param str
      * @return final reversing string
      */
+    /*
     public StringBuilder reverseRes(String str){
         if(str == null || str.isEmpty()){
             System.out.println("the given strings has no reference");
@@ -322,15 +324,18 @@ public class Main {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(str);
         String reversString;
-        List<Integer> indexOfParentheses;
-        indexOfParentheses = fiendsParentheses(stringBuilder);
-        for(int i = indexOfParentheses.size() / 2; i >= 0; --i){
-           reversString =  reverse(stringBuilder.substring(indexOfParentheses.get(i), indexOfParentheses.get(indexOfParentheses.size() - i + 1)));
-           stringBuilder.replace(indexOfParentheses.get(i),indexOfParentheses.get(indexOfParentheses.size() - i + 1), reversString);
-           stringBuilder.delete(indexOfParentheses.get(i), indexOfParentheses.get(indexOfParentheses.size() - i + 1));
+        List<Integer> indexOfParentheses = new ArrayList<>();
+        fiendsParentheses(stringBuilder, indexOfParentheses);
+        for(int i = indexOfParentheses.size() / 2  - 1; i >= 0; --i){
+           reversString =  reverse(stringBuilder.substring(indexOfParentheses.get(i) , indexOfParentheses.get(indexOfParentheses.size() - i - 1) + 1));
+           stringBuilder.replace(indexOfParentheses.get(i),indexOfParentheses.get(indexOfParentheses.size() - i - 1), reversString);
+           stringBuilder.deleteCharAt(indexOfParentheses.get(i));
+           stringBuilder.deleteCharAt(indexOfParentheses.get(indexOfParentheses.size() - i - 1));
+           System.out.println(stringBuilder);
+
         }
         return stringBuilder;
-    }
+    }*/
 
     /**
      * helping method for ex.10
@@ -338,8 +343,8 @@ public class Main {
      * @param str
      * @return List<Integer>
      */
-    public List<Integer> fiendsParentheses(StringBuilder str){
-        List<Integer> integerListOpeningClosing = new ArrayList<>();
+    /*
+    public void fiendsParentheses(StringBuilder str, List<Integer> integerListOpeningClosing){
         List<Integer> integerListClosing = new ArrayList<>();
         for(int i = 0; i < str.length(); ++i){
             if(str.charAt(i) == '('){
@@ -349,27 +354,28 @@ public class Main {
             }
         }
         if(integerListOpeningClosing.size() == integerListClosing.size()){
-            for(int i = 0; i < integerListOpeningClosing.size(); ++i){
+            for(int i = 0; i < integerListClosing.size(); ++i){
                 integerListOpeningClosing.add(integerListClosing.get(i));
             }
         }
-        return integerListOpeningClosing;
-    }
 
+    }
+    */
     /**
      * helping method for ex.10
      * reverses the given sub string
      * @param str1
      * @return reversed substring
      */
-    public String reverse(String str1){
+   /*
+   public String reverse(String str1){
        String str2;
        StringBuilder stringBuilder = new StringBuilder();
        stringBuilder.append(str1);
        stringBuilder.reverse();
        str2 = stringBuilder.toString();
        return str2;
-    }
+    }*/
 
 
 
@@ -396,6 +402,6 @@ public class Main {
         //System.out.println(ob.longestPalindrome("abacaaacabcabacba"));
         //System.out.println(ob.longestCommonSubSequence("inchkachkavonces", "voncesinchkachka"));
         //System.out.println(ob.numberOfCommonCharacters("voncesinvhkamanuk", "voncesinchkamanu"));
-        System.out.println(ob.reverseRes("(abc(acd)ade(adf))"));
+        System.out.println(ob.reverseRes("(abc(acd(ade)adf))"));
     }
 }
